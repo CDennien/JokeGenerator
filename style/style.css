@@ -1,0 +1,123 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+/*Variables*/
+:root {
+    --default-font: 'Lacquer', cursive;
+    --font-colour: black;
+    --light-green: #60bc74;
+    --dark-green: #438251;
+
+}
+
+/*Styling*/
+* {
+    /*height: 100%;*/
+    padding: 0;
+    margin: 0;
+    font-family: var(--default-font);
+    color: var(--font-colour);
+}
+
+body {
+    background-image: radial-gradient(var(--dark-green) 20%, transparent 20%), radial-gradient(var(--dark-green) 20%, transparent 20%);
+    background-color: var(--light-green);
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+    height: 100px;
+    width: 100%;
+}
+
+.background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+    background: white;
+    height: 90%;
+    width: 90%;
+    border: .5em var(--dark-green) solid;
+    box-shadow: 2em 2em var(--dark-green);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.content img {
+    width: 10em;
+    height: auto;
+    border-radius: 50%;
+    border: .5em var(--dark-green) solid;
+    background-image: radial-gradient(var(--dark-green) 20%, transparent 20%), radial-gradient(var(--dark-green) 20%, transparent 20%);
+    background-color: var(--light-green);
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+}
+
+.content button {
+    color: white;
+    background-color: var(--dark-green);
+    border: none;
+}
+
+.content button:hover {
+    background-color: var(--light-green);
+}
+
+/*Popup*/
+.popup {
+    position: absolute;
+    width: 20em;
+    height: 10em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--dark-green);
+    color: white;
+    animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+
+.popup-close svg {
+    position: absolute;
+    right: .8em;
+    top: .4em;
+}
+
+.popup-content {
+    background-color: white;
+    color: black;
+    width: 19.5em;
+    height: 8em;
+    margin-top: .25em;
+    margin-left: .25em;
+    padding: 1em;
+}
+
+/*Keyframes*/
+@keyframes glitch {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    20% {
+        transform: translate(-49%, -51%);
+    }
+    40% {
+        transform: translate(-49%, -49%);
+    }
+    60% {
+        transform: translate(-51%, -51%);
+    }
+    80% {
+        transform: translate(-51%, -49%);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
